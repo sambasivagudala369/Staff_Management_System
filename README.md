@@ -76,7 +76,7 @@ String url = "jdbc:mysql://localhost:3306/test";
 
 String user = "root";
 
-String password = "Vijay#369"; // Change to your MySQL password
+String password = "examplepassword"; // Change to your MySQL password
 
 # Running the Application
 
