@@ -1,58 +1,103 @@
-### **Project: Staff Management System with GUI & MySQL**  
-This guide will walk you through the step-by-step process of building a **Java-based Staff Management System** using **Swing for the GUI** and **MySQL for the database**.  
+# Staff Management System
 
----
+![Java](https://img.shields.io/badge/Java-17-blue)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
+![Swing](https://img.shields.io/badge/Java%20Swing-GUI-yellowgreen)
 
-## **📌 Step 1: Set Up the Environment**
-### **1. Install Required Software**
-✅ Install **Java JDK (17 or latest version)**  
-✅ Install **MySQL Server & MySQL Workbench**  
-✅ Install **Eclipse/IntelliJ IDEA** (for Java development)  
-✅ Install **JDBC Connector** (MySQL Java Driver)  
+A comprehensive Java Swing application for managing staff information with MySQL database integration.
 
----
+## Features
 
-## **📌 Step 2: Set Up the Database (MySQL)**
-### **1. Create a Database**
-Open **MySQL Workbench** or Command Line Client and execute:
+- **Department-wise Staff Viewing**
+  - Coding
+  - Infrastructure
+  - Operations
+  - Development
+  - Design
+- **CRUD Operations**
+  - Add new staff members
+  - Update staff salaries
+  - Delete staff records
+  - View all staff data
+- **User-Friendly Interface**
+  - Clean, intuitive GUI
+  - Responsive design
+  - Data displayed in formatted tables
 
-### **2. Create a Table for Staff Details**
+## Screenshots
 
-### **3. Insert Sample Data**
+![Main Screen](screenshots/main_screen.png)
+*Main application interface*
 
-## **📌 Step 3: Connect Java to MySQL**
-### **1. Download and Add JDBC Connector**
-- Download **MySQL Connector/J** from [here](https://dev.mysql.com/downloads/connector/j/)
-- Add it to your project in **Eclipse/IntelliJ**:
-  - **Eclipse:** Right-click the project → Build Path → Configure Build Path → Add External JARs → Select MySQL Connector  
-  - **IntelliJ:** File → Project Structure → Modules → Dependencies → Add JAR  
+![Add Staff](screenshots/add_staff.png)
+*Add new staff member form*
 
-### **2. Create a Java Class for Database Connection**
+### Prerequisites
+```bash
+# Install Java JDK 17+
+sudo apt install openjdk-17-jdk
 
-## **📌 Step 4: Create GUI Using Java Swing**
-### **1. Create the Main GUI Window**
-## **📌 Step 5: Run & Test the Project**
-### **1. Compile & Run**
-- Run `StaffManagementGUI.java`
-- Select a department from the dropdown and click "Fetch Staff."
-- Staff details from MySQL will be displayed in the text area.
+# Install MySQL Server 8.0+
+sudo apt install mysql-server
 
-### **2. Verify Output**
-If everything works correctly, selecting "IT" should display:
+# Verify installations
+java -version
+mysql --version
 
-## **📌 Step 6: Enhance the Project (Optional)**
-### 🔹 **Add More Features**
-✅ Add **"Add New Staff"** feature  
-✅ Include **"Update Salary"** option  
-✅ Implement **"Delete Staff"** functionality  
+#Database Setup
 
-### 🔹 **Improve UI Design**
-✅ Use **JTable instead of JTextArea** for a better display  
-✅ Apply **Look and Feel themes** for a modern UI  
+-- Create database
+CREATE DATABASE test;
 
----
+-- Use the database
+USE test;
 
-## **🎯 Final Thoughts**
-🚀 You have successfully built a **Staff Management System** using **Java Swing & MySQL**. This project helps in fetching employee details based on their department dynamically.
+-- Create staff table
+CREATE TABLE rog (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    work VARCHAR(50),
+    salary INT
+);
 
-Let me know if you need **more features or improvements!** 🚀🔥
+-- Sample data (optional)
+INSERT INTO rog VALUES 
+(1, 'John Doe', 'Coding', 75000),
+(2, 'Jane Smith', 'Infra', 65000),
+(3, 'Mike Johnson', 'Operations', 60000);
+
+```
+
+# Configuration
+
+// Update these connection details in StaffManagementGUI.java if needed
+
+String url = "jdbc:mysql://localhost:3306/test";
+
+String user = "root";
+
+String password = "Vijay#369"; // Change to your MySQL password
+
+# Running the Application
+
+javac Main.java
+
+java Main
+
+
+# Dependencies
+
+Add MySQL Connector/J to your project (download from https://dev.mysql.com/downloads/connector/j/)
+
+# If compiling with MySQL Connector
+
+javac -cp .:mysql-connector-java-8.0.28.jar StaffManagementGUI.java
+
+java -cp .:mysql-connector-java-8.0.28.jar StaffManagementGUI
+
+
+# Contact
+
+### Gudala Sambasiva - sambasivagudala13@gmail.com
+
+### Project Link: https://github.com/yourusername/staff-management-system
