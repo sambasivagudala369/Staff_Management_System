@@ -89,7 +89,7 @@ java Main
 
 Add MySQL Connector/J to your project (download from https://dev.mysql.com/downloads/connector/j/)
 
-# If compiling with MySQL Connector
+#### If compiling with MySQL Connector
 
 javac -cp .:mysql-connector-java-8.0.28.jar StaffManagementGUI.java
 
