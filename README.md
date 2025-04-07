@@ -100,5 +100,5 @@ java -cp .:mysql-connector-java-8.0.28.jar StaffManagementGUI
 
 ### Gudala Sambasiva - sambasivagudala13@gmail.com
 
-### Project Link: https://github.com/sambasivagudala369/Staff_Management_System
+### Project Link: [https://github.com/sambasivagudala369/Staff_Management_System](https://github.com/sambasivagudala369/Staff_Management_System)
 
